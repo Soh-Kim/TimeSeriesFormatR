@@ -76,7 +76,7 @@ LongitudinalData <- R6::R6Class( "LongitudinalData",
                                #' @param SproutDate Date of Sprout. Not mandatory.
                                #' @param UUID_Other Data Frame to connect old UUID and new UUID
                                #' @param duplicate Weather data has duplication or not. This parameter is not used in the function.
-                               AddDate = function( RawData, ListOfData, SproutDate = NULL, UUID_Other = NULL, duplicate = FALSE ){
+                               AddData = function( RawData, ListOfData, SproutDate = NULL, UUID_Other = NULL, duplicate = FALSE ){
                                  NewData <- LongitudinalData$new( RawData, ListOfData, SproutDate = NULL, UUID_Other = NULL, duplicate = FALSE )
                                  self$Indivs <- c( self$Indivs, NewData$Indivs )
                                  self$RawData <- rbind( self$RawData, NewData$RawData )
