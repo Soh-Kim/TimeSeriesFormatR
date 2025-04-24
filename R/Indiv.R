@@ -2,6 +2,7 @@
 #' @description
 #' R6 class to store individual longitudinal data. It can store unique ID, longitudinal data (time-dependent variables) as well as other time-independent variable.
 #' @importFrom R6 R6Class
+#' @export
 
 Indiv <- R6::R6Class( "Indiv",
 

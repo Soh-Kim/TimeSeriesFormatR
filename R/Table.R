@@ -2,6 +2,7 @@
 #' @description
 #' R6 class to develop convenient data frame to analyse time series data.
 #' @importFrom R6 R6Class
+#' @export
 
 Table <- R6::R6Class( "Table",
                   public = list(

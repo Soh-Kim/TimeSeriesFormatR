@@ -2,6 +2,7 @@
 #' @description
 #' R6 class to store all data. Individual's data is stored with Indiv R6 class.
 #' @importFrom R6 R6Class
+#' @export
 
 LongitudinalData <- R6::R6Class( "LongitudinalData",
 
