@@ -15,7 +15,7 @@ Table <- R6::R6Class( "Table",
                       colname <- unname(unlist( LongitudinalData$Record ) )
                       ListOfDf <- lapply( LongitudinalData$Indivs, private$extract, Target = TargetTrait, colname = colname )
                       self$Table <- do.call( rbind, ListOfDf )
-                      #self$Table[, LongitudinalData$Record$Date ] <- lapply( self$Talbe[, LongitudinalData$Record$Date ], as.numeric)
+                      self$Table[, LongitudinalData$Record$Date ] <- lapply( self$Table[, LongitudinalData$Record$Date ], as.numeric )
                     }
                   ),
                   private = list(
