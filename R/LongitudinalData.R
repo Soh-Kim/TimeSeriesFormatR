@@ -33,7 +33,7 @@ LongitudinalData <- R6::R6Class( "LongitudinalData",
                                    print( "Phenotype must be specified in the Data Frame")
                                  } else {
                                    self$RawData <- RawData[,unname(unlist(ListOfData))]
-                                   colnames( self$Rawdata )[ colnames( self$Rawdata ) == ListOfData$ID ]  <- "UUID"
+                                   colnames( self$Rawdata )[ colnames( self$Rawdata ) == ListOfData$UUID ]  <- "UUID"
                                    self$Indivs  <- apply( RawData, 1, Indiv$new, ListOfData, SproutDate = NULL, UUID_Other = NULL, duplicate = FALSE )
                                    self$NameOfPheno <- unique( ListOfData$TimeDependVar )
                                    self$Record$Date <- unique( na.omit( names( summary( as.factor(RawData[, ListOfData$Date ] ) ) ) ) )
