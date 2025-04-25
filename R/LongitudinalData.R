@@ -119,7 +119,7 @@ LongitudinalData <- R6::R6Class( "LongitudinalData",
                                  }
                                  Target <- self$PhenotypeTable[[l_target]]
                                  Day <- self$Record$Date
-                                 matplot( as.Date(Day), t( Target$Table[,Day]), type = "l")
+                                 matplot( as.Date(Day), t( Target$Table[,Day]), type = "l", xlab="Time", ylab="Phenotype")
                                }
 
                                # method to create new variable such as TC/TC_R
