@@ -102,7 +102,12 @@ LongitudinalData <- R6::R6Class( "LongitudinalData",
                                  }
                                  TargetTrait <- self$NameOfPheno[ Target ]
                                  self$PhenotypeTable <- Table$new( self, TargetTrait )
-                               }#,
+                               },
+                               #' @description method to visualize longitudinal data
+                               Plot = function(){
+                                 Day <- self$Record$Date
+                                 matplot( as.Date(Day), t( self$PhenotypeTable$Table[,Day]), type = "l")
+                               }
 
                                # method to create new variable such as TC/TC_R
                                # CreateNew = function( ){}

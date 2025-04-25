@@ -26,8 +26,9 @@ R6 class to store all data. Individual's data is stored with Indiv R6 class.
 \itemize{
 \item \href{#method-LongitudinalData-new}{\code{LongitudinalData$new()}}
 \item \href{#method-LongitudinalData-IntegDuplication}{\code{LongitudinalData$IntegDuplication()}}
-\item \href{#method-LongitudinalData-AddDate}{\code{LongitudinalData$AddDate()}}
+\item \href{#method-LongitudinalData-AddData}{\code{LongitudinalData$AddData()}}
 \item \href{#method-LongitudinalData-CreateDataTable}{\code{LongitudinalData$CreateDataTable()}}
+\item \href{#method-LongitudinalData-Plot}{\code{LongitudinalData$Plot()}}
 \item \href{#method-LongitudinalData-clone}{\code{LongitudinalData$clone()}}
 }
 }
@@ -73,12 +74,12 @@ Method to eliminate duplication as well as integrate time-series data.
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-LongitudinalData-AddDate"></a>}}
-\if{latex}{\out{\hypertarget{method-LongitudinalData-AddDate}{}}}
-\subsection{Method \code{AddDate()}}{
+\if{html}{\out{<a id="method-LongitudinalData-AddData"></a>}}
+\if{latex}{\out{\hypertarget{method-LongitudinalData-AddData}{}}}
+\subsection{Method \code{AddData()}}{
 Method to add new data.
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{LongitudinalData$AddDate(
+\if{html}{\out{<div class="r">}}\preformatted{LongitudinalData$AddData(
   RawData,
   ListOfData,
   SproutDate = NULL,
@@ -110,6 +111,16 @@ Method to add new data.
 method to create data frame as we wish.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{LongitudinalData$CreateDataTable()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-LongitudinalData-Plot"></a>}}
+\if{latex}{\out{\hypertarget{method-LongitudinalData-Plot}{}}}
+\subsection{Method \code{Plot()}}{
+method to visualize longitudinal data
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LongitudinalData$Plot()}\if{html}{\out{</div>}}
 }
 
 }

@@ -21,6 +21,13 @@ R6 class to store individual longitudinal data. It can store unique ID, longitud
 }
 \if{html}{\out{</div>}}
 }
+\section{Active bindings}{
+\if{html}{\out{<div class="r6-active-bindings">}}
+\describe{
+\item{\code{TimeIndpendVar}}{Data.frame to store time independent variable such as cultivation condition.}
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
