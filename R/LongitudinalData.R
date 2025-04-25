@@ -102,7 +102,7 @@ LongitudinalData <- R6::R6Class( "LongitudinalData",
                                  }
                                  TargetTrait <- self$NameOfPheno[ Target ]
                                  self$PhenotypeTable <- c( self$PhenotypeTable, Table$new( self, TargetTrait ) )
-                                 names( self$PhenotypeTable ) <- TargetTrait
+                                 names( self$PhenotypeTable )[length(self$PhenotypeTable)] <- TargetTrait
                                },
                                #' @description method to visualize longitudinal data
                                Plot = function(){
