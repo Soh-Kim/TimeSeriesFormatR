@@ -17,7 +17,7 @@ Indiv <- R6::R6Class( "Indiv",
                     #' @field TimeDependVar Data.frame to store time dependent variable such as phenotype.
                     TimeDependVar = NULL,
                     #' @field TimeIndpendVar Data.frame to store time independent variable such as cultivation condition.
-                    TimeIndpendVar = NULL,
+                    TimeIndependVar = NULL,
 
                     #' @description Construct Indiv object.
                     #' @param RawData one-row Data Frame with several variables as well as UUID
