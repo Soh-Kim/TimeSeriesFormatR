@@ -16,7 +16,7 @@ LongitudinalData <- R6::R6Class( "LongitudinalData",
                                #' @field NameOfPheno Vector to store all of variables.
                                NameOfPheno = NULL,
                                #' @field PhenotypeTable Field to store R6 Table Class.
-                               PhenotypeTable = NULL,
+                               PhenotypeTable = list(),
 
                                #' @description Construct LongitudinalData object.
                                #' @param RawData one-row Data Frame with several variables as well as UUID
