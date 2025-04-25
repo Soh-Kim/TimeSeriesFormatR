@@ -106,8 +106,20 @@ LongitudinalData <- R6::R6Class( "LongitudinalData",
                                },
                                #' @description method to visualize longitudinal data
                                Plot = function(){
+                                 l_list <- length(self$PhenotypeTable)
+                                 l_target <- 1
+                                 if(l_list > 1 ){
+                                   cat( paste( "Following", l_list,"phenotypes are recorded; \n " ) )
+                                   cat( paste( 1:l_list, ".",  names(Pheno$PhenotypeTable)  ), sep = "\t" )
+                                   l_target <- as.numeric( readline( "Please indicate the number of phenotype you want to plot: " ) )
+                                 }
+                                 while ( ! l_target %in% 1:l_list  ) {
+                                   cat( "The indicated number is out of range" )
+                                   l_target <- as.numeric( readline( "Please indicate the number of phenotype you want to plot: " ) )
+                                 }
+                                 Target <- self$PhenotypeTable[[l_target]]
                                  Day <- self$Record$Date
-                                 matplot( as.Date(Day), t( self$PhenotypeTable$Table[,Day]), type = "l")
+                                 matplot( as.Date(Day), t( Target$Table[,Day]), type = "l")
                                }
 
                                # method to create new variable such as TC/TC_R
